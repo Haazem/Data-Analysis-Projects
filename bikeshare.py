@@ -1,4 +1,3 @@
-from __future__ import barry_as_FLUFL
 import pandas as pd
 import numpy as np
 import time
@@ -30,7 +29,7 @@ def get_filters():
     # get user input for month (all, january, february, ... , june)
     while True:
             #get month name
-            month = input("Enter name of the month to filter by, or 'all' to apply no month filter between january & june : " ).lower()
+            month = input("Enter name of the month to filter by, or 'all' to apply no month filter ,months between [january - june] : " ).lower()
             if month in  ['all', 'january', 'february', 'march', 'april', 'may', 'june']:
                 break
         
@@ -129,15 +128,13 @@ def station_stats(df , city ):
     most_commonly_end_station =  df['End Station'].mode()[0]
     print('most commonly used end station is : '+ str(most_commonly_end_station))
 
-    #***display most frequent combination of start station and end station trip***
+    #display most frequent combination of start station and end station trip
     #trip = Start Station + End Station
-    #check if city is Washington
     
-    if city != 'washington':
-        df['trip'] = df['Start Station'] + ' To ' + df['End Station']
-        #most_common_trip 
-        most_common_trip = df['trip'].mode()[0]
-        print('most common trip from start to end is From ' +  str(most_common_trip))
+    df['trip'] = df['Start Station'] + ' To ' + df['End Station']
+    #most_common_trip 
+    most_common_trip = df['trip'].mode()[0]
+    print('most common trip from start to end is From ' +  str(most_common_trip))
 
     print("\nThis took %s seconds." % (time.time() - start_time))
     print('-'*40)
@@ -178,16 +175,17 @@ def user_stats(df , city):
     print()
     
     # ***Display counts of gender***
-    #check if city is Washington
+    #(only available for NYC and Chicago)
+    #check if city not equal Washington
     if city != 'washington':
-        print('counts of each gender (only available for NYC and Chicago):')
+        print('counts of each gender :')
         gender_count = df['Gender'].value_counts()
         print('Male: '+str(gender_count[0]))
         print('Female: '+str(gender_count[1]))
         print()
     
     #***Display earliest, most recent, and most common year of birth***
-    #check if city is Washington
+    #check if city not equal Washington
     if city != 'washington':
     
         #earliest year of birth
@@ -216,7 +214,7 @@ def design():
         print("#2 Display Popular Stations And Trip")
         print("#3 Display Trip Duration")
         print("#4 Display User Info")
-        print("#5 To Stop\n")
+        print("#5 To Stop explore\n")
         #take user choice
         choice = input("choice number from [1 :  5]: ")
         #check user choice   
@@ -229,10 +227,14 @@ def design():
 def solve():
            
     #check if  user want to end the program        
-    check_user_choice= input("Do you want to continue? Enter yes or no : ").lower()
+    while True:
+        check_user_choice= input("Do you want to continue? Enter yes or no : ").lower()
+        if check_user_choice == 'yes' or check_user_choice == 'no':
+            break
+        
     return check_user_choice
         
-        
+          
 #main Function
 def main():
     while True:
@@ -280,5 +282,6 @@ def main():
 #Run Script
 if __name__ == "__main__":
     main()
-    ##df = load_data('new york city', 'april', 'friday')
+
+
 
