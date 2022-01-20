@@ -7,7 +7,10 @@ CITY_DATA = { 'chicago': 'chicago.csv',
               'newyorkcity': 'new_york_city.csv',
               'washington': 'washington.csv' }
 
+#months from 1 : 6
+months = ['january', 'february', 'march', 'april', 'may', 'june']
 
+ 
 #get_Filters function
 def get_filters():
     """
@@ -23,7 +26,7 @@ def get_filters():
     while True:
         #get city name
         city = input('Enter name of the city to analyze [chicago, new york city, washington]: ').lower().replace(' ' , '')
-        if (city in ['chicago', 'newyorkcity', 'washington']):
+        if (city in CITY_DATA):
             break
             
     # get user input for month (all, january, february, ... , june)
@@ -75,7 +78,6 @@ def load_data(city, month, day):
     
     #filter by month if applicable
     if month != 'all':
-        months = ['january', 'february', 'march', 'april', 'may', 'june']
         #find  the month number 
         month = months.index(month) + 1
         
@@ -99,8 +101,11 @@ def time_stats(df):
 
     #display the most common month    
     most_Common_month = df['month'].mode()[0]
-    print('the most common month is :' + str(most_Common_month))
-
+    #show the name of most common month
+    for index , mon in enumerate(months):
+        if index+ 1 ==  most_Common_month:
+             print('the most common month is :' + mon)
+                   
     # display the most common day of week
     most_common_day = df['day_of_week'].mode()[0]
     print('the most common day of week is :' + str(most_common_day))
@@ -124,22 +129,35 @@ def station_stats(df , city ):
     most_commonly_start_station =  df['Start Station'].mode()[0]
     print('most commonly used start station is :' + str(most_commonly_start_station))
     
+    #show number of occurance of most common start station
+    occurance_number =  df['Start Station'].value_counts()[0]
+    print('the count of occurrences of the most common Start Station is: ' + str(occurance_number))
+    
+    
     # display most commonly used end station
     most_commonly_end_station =  df['End Station'].mode()[0]
     print('most commonly used end station is : '+ str(most_commonly_end_station))
 
-    #display most frequent combination of start station and end station trip
-    #trip = Start Station + End Station
+    #show number of occurance of most common End station
+    occurance_number =  df['End Station'].value_counts()[0]
+    print('the count of occurrences of the most common End Station is : ' + str(occurance_number))
     
+
+    #display most frequent combination of start station and end station trip
+    #trip = Start Station + End Station    
     df['trip'] = df['Start Station'] + ' To ' + df['End Station']
     #most_common_trip 
     most_common_trip = df['trip'].mode()[0]
-    print('most common trip from start to end is From ' +  str(most_common_trip))
+    print('most common trip from Start to End is From ' +  str(most_common_trip))
+
+    #show number of occurance of most common trip
+    occurance_number =  df['trip'].value_counts()[0]
+    print('the count of occurrences of the most common trip is : ' + str(occurance_number))
 
     print("\nThis took %s seconds." % (time.time() - start_time))
     print('-'*40)
 
-
+    
 #3 Trip duration
 #trip_duration_stats 
 def trip_duration_stats(df):
@@ -150,12 +168,26 @@ def trip_duration_stats(df):
 
     # display total travel time
     total_time=  df['Trip Duration'].sum()
-    print('total travel time is : ' + str(total_time))
+     
+    #divmod method to find number of hours , mins , seconds
+    minute, second = divmod(total_time, 60) 
+    hour, minute = divmod(minute, 60)  
+    print('total travel time is ' + str(hour) + ' hour and ' + str(minute) + ' minutes and ' + str(second) + ' seconds')
+    print()
     
     # display mean travel time
     average_time = df['Trip Duration'].mean()
-    print('mean travel time is :' + str(average_time))
-
+    minute2, second2 = divmod(average_time, 60) 
+    hour2, minute2 = divmod(minute, 60)
+    
+    #check if number of hours greater than 0
+    if hour2 > 0 :
+        print('average travel time is ' + str(hour2) + ' hour and ' + str(minute2) + ' minute and '+ str(second2) + ' second')
+    
+    else:
+        print('average travel time is ' +  str(minute2) + ' minute and '+ str(second2) + ' second')
+        
+        
     print("\nThis took %s seconds." % (time.time() - start_time))
     print('-'*40)
 
@@ -184,9 +216,9 @@ def user_stats(df , city):
         print('Female: '+str(gender_count[1]))
         print()
     
-    #***Display earliest, most recent, and most common year of birth***
-    #check if city not equal Washington
-    if city != 'washington':
+    
+        #***Display earliest, most recent, and most common year of birth***
+        #check if city not equal Washington
     
         #earliest year of birth
         earliest_year = int(df['Birth Year'].min())
@@ -204,12 +236,33 @@ def user_stats(df , city):
     print("\nThis took %s seconds." % (time.time() - start_time))
     print('-'*40)
 
+#5 funcion used to show data 
+def show_data(df , i ):
+    
+    #iloc to print row at current_index 
+    while (True):
+        
+        if (len(df) == 0 or i == len(df)):
+            break
+        
+        print('row number ' + str(i + 1))
+        print() 
+        print(df.iloc[i])
+        print('\n')
+        i +=1 
+        if (i % 5 == 0 ):
+            s = input('Do you want to continue showing data .enter yes or no: ').lower()
+            if s == 'no':
+                break
+
+
 #Useful functions
 #Design Function
 def design():
     choice = ''
     while True:
         #Menue
+        print('Explore Data')
         print("#1 Display Popular Times Of Travel")
         print("#2 Display Popular Stations And Trip")
         print("#3 Display Trip Duration")
@@ -228,7 +281,7 @@ def solve():
            
     #check if  user want to end the program        
     while True:
-        check_user_choice= input("Do you want to continue? Enter yes or no : ").lower()
+        check_user_choice= input("Do you want to continue explor data? Enter yes or no : ").lower()
         if check_user_choice == 'yes' or check_user_choice == 'no':
             break
         
@@ -236,9 +289,10 @@ def solve():
         
           
 #main Function
+
 def main():
+    i = 0 
     while True:
-        
         city, month, day = get_filters()
         #print city name of user 
         print('you entered ' + city + ' city')
@@ -268,7 +322,9 @@ def main():
                     break
             else :
                 break
-
+        s = input('Do you want to show data .enter yes or no: ').lower()
+        if s == 'yes':
+            show_data(df , 0)
 
         restart = input('\nWould you like to restart? Enter yes or no.\n')
         if restart.lower() != 'yes':
@@ -277,11 +333,10 @@ def main():
             break
         
 
-
-
 #Run Script
 if __name__ == "__main__":
     main()
+
 
 
 
