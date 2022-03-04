@@ -1,4 +1,4 @@
-** Project Tasks
+Project Tasks
 
 1. The World Bank's international debt data
 
@@ -16,5 +16,5 @@
 
 8. The most common debt indicator
 
-9. Other viable debt issues and conclusion **
+9. Other viable debt issues and conclusion 
 
