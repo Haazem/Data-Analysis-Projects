@@ -1,19 +1,19 @@
 **Project Tasks**
 
-The World Bank's international debt data
+**1)The World Bank's international debt data**
 
-Finding the number of distinct countries
+**2)Finding the number of distinct countries**
 
-Finding out the distinct debt indicators
+**3)Finding out the distinct debt indicators**
 
-Totaling the amount of debt owed by the countries
+**4)Totaling the amount of debt owed by the countries**
 
-Country with the highest debt
+**5)Country with the highest debt**
 
-Average amount of debt across indicators
+**6)Average amount of debt across indicators**
 
-The highest amount of principal repayments
+**)7The highest amount of principal repayments**
 
-The most common debt indicator
+**8)The most common debt indicator**
 
-Other viable debt issues and conclusion
+**)9Other viable debt issues and conclusion**
