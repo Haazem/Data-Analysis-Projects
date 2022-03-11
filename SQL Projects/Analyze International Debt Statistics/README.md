@@ -18,9 +18,9 @@ What is the average amount of debt owed by countries across different debt indic
 
 **6) Average amount of debt across indicators**
 
-**)7 The highest amount of principal repayments**
+**7) The highest amount of principal repayments**
 
 **8) The most common debt indicator**
 
-**)9 Other viable debt issues and conclusion**
+**9) Other viable debt issues and conclusion**
 
