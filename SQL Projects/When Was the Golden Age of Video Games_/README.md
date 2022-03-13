@@ -1,6 +1,6 @@
 ***When Was the Golden Age of Video Games?***
 
-***Tasks***
+***Tasks:***
 
 ***1. The ten best-selling video games***
 
