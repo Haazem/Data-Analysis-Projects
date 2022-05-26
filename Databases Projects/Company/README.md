@@ -2,9 +2,9 @@
 
 ***This DataBase has six columns (Employee,Department,Locations,Projeccts,Dependent,MyWork).***
 
-***Steps:
+**Steps:**
 ***1) Understand the case study and draw ERD diagram.***
 
 ***2) Convert ER to Relational Mapping.***
 
-***3) Create database, tables , Columns .....
+***3) Create database, tables , Columns .....***
