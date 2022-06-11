@@ -2,7 +2,7 @@
 
 ***This case study is about a real-world job posting dataset to uncover insights for a fictional recruitment company called DataSearch.***
 
-## Steps i did in this Dashboard : 
+## Steps to achieve this Dashboard : 
 
 ***Data Check.***
 
