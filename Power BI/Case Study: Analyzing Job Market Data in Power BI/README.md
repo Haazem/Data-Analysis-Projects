@@ -4,15 +4,15 @@
 
 ## Steps to achieve this Dashboard : 
 
-***Data Check.***
+***- Data Check.***
 
-***Explore Data.***
+***- Explore Data.***
 
-***Analyze&Visualize Data.***
+***- Analyze&Visualize Data.***
 
-***Dashboarding.***
+***- Dashboarding.***
 
-***Communicate Insights.***
+***- Communicate Insights.***
 
 
 ***I used Power Query to investigate and clean the data to find out what skills are most in-demand for data scientists, data analysts,and data engineers.***
