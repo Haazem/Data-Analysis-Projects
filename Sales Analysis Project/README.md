@@ -1,7 +1,7 @@
 
 ## Sales Analysis Project : Tools(SQL , Power BI).
 
-### Sales Management 
+### Sales Management project.
 
 
 ### DataBase : AdventureWorks
