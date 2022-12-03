@@ -1,5 +1,3 @@
-USE [Danny's Diner];
-
 CREATE SCHEMA dannys_diner;
 
 CREATE TABLE dannys_diner.sales(
