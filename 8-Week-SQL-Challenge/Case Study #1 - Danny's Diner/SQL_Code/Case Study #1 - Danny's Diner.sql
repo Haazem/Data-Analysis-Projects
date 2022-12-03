@@ -1,0 +1,2 @@
+CREATE TABLE temp
+(id INT)
