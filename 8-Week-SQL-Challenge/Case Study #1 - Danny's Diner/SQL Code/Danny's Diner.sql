@@ -52,13 +52,13 @@ VALUES
   
 CREATE TABLE dannys_diner.members(
 	
-	customer_id		VARCHAR(1),
+	customer_id	    VARCHAR(1),
 	join_date	    DATE
 );
 
 INSERT INTO dannys_diner.members(customer_id,join_date)
 
-VALUES('A', '2021-01-07'),
+VALUES    ('A', '2021-01-07'),
 	  ('B', '2021-01-09');
 
 
