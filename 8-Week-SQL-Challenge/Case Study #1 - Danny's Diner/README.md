@@ -2,13 +2,13 @@
 
 ![case_1](https://user-images.githubusercontent.com/73290269/205441001-e01c76e2-6661-43cf-a5d8-29c6d50843ef.png)
 
-## Features
+# Table of contents
+1. [Introduction](#introduction)
+2. [Some paragraph](#paragraph1)
+    1. [Sub paragraph](#subparagraph1)
+3. [Another paragraph](#paragraph2)
 
-* Introduction
-* Problem Statement
-* Entity Relationship Diagram
-* [Case Study Questions](https://github.com/Haazem/Data-Analysis-Projects/tree/main/8-Week-SQL-Challenge/CaseStudyQuestions)
-* [Solution on Github](https://github.com/Haazem/Data-Analysis-Projects/blob/main/8-Week-SQL-Challenge/Case%20Study%20%231%20-%20Danny's%20Diner/Solution.md)
+4. [Solution on Github](https://github.com/Haazem/Data-Analysis-Projects/blob/main/8-Week-SQL-Challenge/Case%20Study%20%231%20-%20Danny's%20Diner/Solution.md)
 
 ## Introduction
 
