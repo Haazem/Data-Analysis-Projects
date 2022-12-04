@@ -4,9 +4,9 @@
 
 # Table of contents
 1. [Introduction](#introduction)
-2. [Problem Statement](#ProblemStatement)
+2. [Problem Statement](problemstatement)
 3. [Entity Relationship Diagram](#entityrelationshipdiagram)
-4. [Case Study Questions](#CaseStudyQuestions)
+4. [Case Study Questions](#casestudyquestions)
 5. [Solution on Github](https://github.com/Haazem/Data-Analysis-Projects/blob/main/8-Week-SQL-Challenge/Case%20Study%20%231%20-%20Danny's%20Diner/Solution.md)
 
 ## Introduction
