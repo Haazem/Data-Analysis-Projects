@@ -4,9 +4,6 @@
 
 # Table of contents
 1. [Introduction](#introduction)
-2. [Problem Statement](problemstatement)
-3. [Entity Relationship Diagram](#entityrelationshipdiagram)
-4. [Case Study Questions](#casestudyquestions)
 5. [Solution on Github](https://github.com/Haazem/Data-Analysis-Projects/blob/main/8-Week-SQL-Challenge/Case%20Study%20%231%20-%20Danny's%20Diner/Solution.md)
 
 ## Introduction
@@ -17,18 +14,20 @@ Danny’s Diner is in need of your assistance to help the restaurant stay afloat
 
 ## Problem Statement <a name="problemstatement"></a>
 
-
 Danny wants to use the data to answer a few simple questions about his customers, especially about their visiting patterns, how much money they’ve spent and also which menu items are their favourite. Having this deeper connection with his customers will help him deliver a better and more personalised experience for his loyal customers.
 
 He plans on using these insights to help him decide whether he should expand the existing customer loyalty program - additionally he needs help to generate some basic datasets so his team can easily inspect the data without needing to use SQL.
 
 Danny has provided you with a sample of his overall customer data due to privacy issues - but he hopes that these examples are enough for you to write fully functioning SQL queries to help him answer his questions!
 
-## Entity Relationship Diagram
+
+##  Entity Relationship Diagram <a name=" entityrelationshipdiagram"></a>
 
 ![Danny's Diner](https://user-images.githubusercontent.com/73290269/205442398-e2ad2da5-c1f7-4824-ad9f-0d7c5c203f4c.png)
 
-## Case Study Questions
+
+##  Case Study Questions <a name="casestudyquestions"></a>
+
 
 1.  What is the total amount each customer spent at the restaurant?
 2.  How many days has each customer visited the restaurant?
