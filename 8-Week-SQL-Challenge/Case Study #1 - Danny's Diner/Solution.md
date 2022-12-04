@@ -26,8 +26,7 @@ ORDER BY total_amount DESC;
 * Customer C spent $36.
 
 
-###
-###
+----
 ### 2. How many days has each customer visited the restaurant?
 
 ```sql
@@ -44,8 +43,7 @@ GROUP BY customer_id;
 * Customer B visited 6 times.
 * Customer C visited 2 times.
 
-###
-###
+----
 ### 3. What was the first item from the menu purchased by each customer?
 
 ```sql
@@ -77,8 +75,7 @@ ORDER BY fi.customer_id;
 * Customer C first order is ramen.
 
 
-###
-###
+----
 ### 4. What is the most purchased item on the menu and how many times was it purchased by all customers?
 
 ```sql
@@ -100,10 +97,7 @@ ORDER BY num_purchased DESC;
 
 
 
-
-
-###
-###
+----
 ### 5. Which item was the most popular for each customer?
 
 ```sql
@@ -144,8 +138,7 @@ WHERE rk = 1;
 * Customer A and C favourite item is ramen.
 * Customer B enjoys all items on the menu.
 
-###
-###
+----
 ### 6. Which item was purchased first by the customer after they became a member?
 
 ```sql
@@ -179,8 +172,7 @@ WHERE rk = 1;
 
 
 
-###
-###
+----
 ### 7. Which item was purchased just before the customer became a member?
 
 ```sql
@@ -216,8 +208,7 @@ WHERE rk = 1;
 * Customer B's first order as member is sushi.
 
 
-###
-###
+----
 ### 8. What is the total items and amount spent for each member before they became a member?
 
 ```sql
@@ -244,8 +235,7 @@ GROUP BY s.customer_id;
 	* Customer B spent $40 on 2 items.
 
 
-###
-###
+----
 ### 9. If each $1 spent equates to 10 points and sushi has a 2x points multiplier — how many points would each customer have?
 
 ```sql
@@ -272,8 +262,7 @@ ORDER BY total_points DESC;
 
 
 
-###
-###
+----
 ### 10. In the first week after a customer joins the program (including their join date) they earn 2x points on all items, not just sushi — how many points do customer A and B have at the end of January?
 
 ```sql
@@ -302,3 +291,4 @@ GROUP BY s.customer_id;
 * Total points for Customer B is 820.
 
 
+----
