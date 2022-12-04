@@ -3,7 +3,8 @@
 
 ## Solution
 View the complete syntax [here](https://github.com/Haazem/Data-Analysis-Projects/blob/main/8-Week-SQL-Challenge/Case%20Study%20%231%20-%20Danny's%20Diner/SQL_Code/Case%20Study%20%231%20-%20Danny's%20Diner.sql)
-
+###
+###
 ### 1. What is the total amount each customer spent at the restaurant?
 
 ```sql
@@ -17,6 +18,12 @@ ORDER BY total_amount DESC;
 
 ```
 
+
+![A1](https://user-images.githubusercontent.com/73290269/205509333-418e6ffb-c123-4cd9-a24e-6f8d5b83f079.png)
+
+
+###
+###
 ### 2. How many days has each customer visited the restaurant?
 
 ```sql
@@ -26,6 +33,11 @@ FROM dannys_diner.sales
 GROUP BY customer_id;
 ```
 
+
+![A2](https://user-images.githubusercontent.com/73290269/205509999-43e27486-e6aa-438b-a534-3f18df8c22e8.png)
+
+###
+###
 ### 3. What was the first item from the menu purchased by each customer?
 
 ```sql
@@ -49,6 +61,13 @@ WHERE fi.rk = 1
 ORDER BY fi.customer_id;
 ```
 
+
+![A3](https://user-images.githubusercontent.com/73290269/205510006-d04060de-223c-41f4-80f1-fcadc7986705.png)
+
+
+
+###
+###
 ### 4. What is the most purchased item on the menu and how many times was it purchased by all customers?
 
 ```sql
@@ -62,6 +81,14 @@ GROUP BY  m.product_name
 ORDER BY num_purchased DESC;
 
 ```
+
+
+![A4](https://user-images.githubusercontent.com/73290269/205510018-050b704b-f019-4878-aeb1-cad9aaf85a8b.png)
+
+
+
+###
+###
 ### 5. Which item was the most popular for each customer?
 
 ```sql
@@ -93,6 +120,15 @@ SELECT customer_id,
 FROM most_popular_item
 WHERE rk = 1;
 ```
+
+
+
+![A5](https://user-images.githubusercontent.com/73290269/205510029-8bdd2189-ede1-417e-89d8-1be796f82c65.png)
+
+
+
+###
+###
 ### 6. Which item was purchased first by the customer after they became a member?
 
 ```sql
@@ -117,6 +153,13 @@ FROM customer_member
 WHERE rk = 1;
 ```
 
+
+![A6](https://user-images.githubusercontent.com/73290269/205510040-e33691b7-c5d9-404d-99c1-87e3945c6582.png)
+
+
+
+###
+###
 ### 7. Which item was purchased just before the customer became a member?
 
 ```sql
@@ -141,6 +184,15 @@ SELECT customer_id,
 FROM customer_member
 WHERE rk = 1;
 ```
+
+
+
+![A7](https://user-images.githubusercontent.com/73290269/205510049-1367562f-c217-4dcd-8fd1-0a1941c09b5f.png)
+
+
+
+###
+###
 ### 8. What is the total items and amount spent for each member before they became a member?
 
 ```sql
@@ -156,6 +208,14 @@ WHERE s.order_date < m.join_date
 GROUP BY s.customer_id;
 ```
 
+
+
+![A8](https://user-images.githubusercontent.com/73290269/205510062-106f8893-366f-4e17-8cd4-98d0a9de4398.png)
+
+
+
+###
+###
 ### 9. If each $1 spent equates to 10 points and sushi has a 2x points multiplier — how many points would each customer have?
 
 ```sql
@@ -172,6 +232,12 @@ ORDER BY total_points DESC;
 
 ```
 
+
+![A9](https://user-images.githubusercontent.com/73290269/205510075-9f146d76-563f-46e2-a090-e95dbc1ba110.png)
+
+
+###
+###
 ### 10. In the first week after a customer joins the program (including their join date) they earn 2x points on all items, not just sushi — how many points do customer A and B have at the end of January?
 
 ```sql
@@ -193,4 +259,8 @@ WHERE s.order_date <= '2021-01-31'
 GROUP BY s.customer_id;
 
 ```
+
+![A10](https://user-images.githubusercontent.com/73290269/205510081-bbd4f4ba-1ec8-44ba-9ca7-1149dd4bc3bd.png)
+
+
 
