@@ -5,6 +5,8 @@
 # Table of contents
 1. [Introduction](#introduction)
 2. [Problem Statement](#problemstatement)
+3. [Entity Relationship Diagram](entityrelationshipdiagram)
+4. [Case Study Questions](casestudyquestions)
 5. [Solution on Github](https://github.com/Haazem/Data-Analysis-Projects/blob/main/8-Week-SQL-Challenge/Case%20Study%20%231%20-%20Danny's%20Diner/Solution.md)
 
 ## Introduction
@@ -22,7 +24,7 @@ He plans on using these insights to help him decide whether he should expand the
 Danny has provided you with a sample of his overall customer data due to privacy issues - but he hopes that these examples are enough for you to write fully functioning SQL queries to help him answer his questions!
 
 
-##  Entity Relationship Diagram <a name=" entityrelationshipdiagram"></a>
+##  Entity Relationship Diagram <a name="entityrelationshipdiagram"></a>
 
 ![Danny's Diner](https://user-images.githubusercontent.com/73290269/205442398-e2ad2da5-c1f7-4824-ad9f-0d7c5c203f4c.png)
 
