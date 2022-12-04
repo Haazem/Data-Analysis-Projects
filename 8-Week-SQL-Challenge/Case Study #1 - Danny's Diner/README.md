@@ -4,11 +4,11 @@
 
 ## Features
 
-- Introduction
-- Problem Statement
-- Entity Relationship Diagram
-- Case Study Questions
-- Solution on Github
+* Introduction
+* Problem Statement
+* Entity Relationship Diagram
+* Case Study Questions
+* [Solution on Github](https://github.com/Haazem/Data-Analysis-Projects/blob/main/8-Week-SQL-Challenge/Case%20Study%20%231%20-%20Danny's%20Diner/Solution.md)
 
 ## Introduction
 
