@@ -21,6 +21,10 @@ ORDER BY total_amount DESC;
 
 ![A1](https://user-images.githubusercontent.com/73290269/205509333-418e6ffb-c123-4cd9-a24e-6f8d5b83f079.png)
 
+* Customer A spent $76.
+* Customer B spent $74.
+* Customer C spent $36.
+
 
 ###
 ###
@@ -35,6 +39,10 @@ GROUP BY customer_id;
 
 
 ![A2](https://user-images.githubusercontent.com/73290269/205509999-43e27486-e6aa-438b-a534-3f18df8c22e8.png)
+
+* Customer A visited 4 times.
+* Customer B visited 6 times.
+* Customer C visited 2 times.
 
 ###
 ###
@@ -64,6 +72,9 @@ ORDER BY fi.customer_id;
 
 ![A3](https://user-images.githubusercontent.com/73290269/205510006-d04060de-223c-41f4-80f1-fcadc7986705.png)
 
+* Customer A first orders are curry and sushi.
+* Customer B first order is curry.
+* Customer C first order is ramen.
 
 
 ###
@@ -84,6 +95,10 @@ ORDER BY num_purchased DESC;
 
 
 ![A4](https://user-images.githubusercontent.com/73290269/205510018-050b704b-f019-4878-aeb1-cad9aaf85a8b.png)
+
+* Most purchased item on the menu is ramen which is 8 times. 
+
+
 
 
 
@@ -126,6 +141,8 @@ WHERE rk = 1;
 ![A5](https://user-images.githubusercontent.com/73290269/205510029-8bdd2189-ede1-417e-89d8-1be796f82c65.png)
 
 
+* Customer A and C favourite item is ramen.
+* Customer B enjoys all items on the menu.
 
 ###
 ###
@@ -155,6 +172,10 @@ WHERE rk = 1;
 
 
 ![A6](https://user-images.githubusercontent.com/73290269/205510040-e33691b7-c5d9-404d-99c1-87e3945c6582.png)
+
+
+* Customer A first order as member is curry.
+* Customer B first order as member is sushi.
 
 
 
@@ -191,6 +212,10 @@ WHERE rk = 1;
 
 
 
+* Customer A's first order as member is curry.
+* Customer B's first order as member is sushi.
+
+
 ###
 ###
 ### 8. What is the total items and amount spent for each member before they became a member?
@@ -213,6 +238,11 @@ GROUP BY s.customer_id;
 ![A8](https://user-images.githubusercontent.com/73290269/205510062-106f8893-366f-4e17-8cd4-98d0a9de4398.png)
 
 
+* Before becoming members,
+
+	* Customer A spent $25 on 2 items.
+	* Customer B spent $40 on 2 items.
+
 
 ###
 ###
@@ -234,6 +264,12 @@ ORDER BY total_points DESC;
 
 
 ![A9](https://user-images.githubusercontent.com/73290269/205510075-9f146d76-563f-46e2-a090-e95dbc1ba110.png)
+
+* Total points for Customer A is 860.
+* Total points for Customer B is 940.
+* Total points for Customer C is 360.
+
+
 
 
 ###
@@ -262,5 +298,7 @@ GROUP BY s.customer_id;
 
 ![A10](https://user-images.githubusercontent.com/73290269/205510081-bbd4f4ba-1ec8-44ba-9ca7-1149dd4bc3bd.png)
 
+* Total points for Customer A is 1,370.
+* Total points for Customer B is 820.
 
 
