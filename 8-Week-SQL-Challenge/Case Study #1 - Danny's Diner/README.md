@@ -4,10 +4,8 @@
 
 # Table of contents
 1. [Introduction](#introduction)
-2. [Some paragraph](#paragraph1)
-    1. [Sub paragraph](#subparagraph1)
-3. [Another paragraph](#paragraph2)
-
+2. [Problem Statement](#Problem Statement)
+3. [Entity Relationship Diagram](#Entity Relationship Diagram)
 4. [Solution on Github](https://github.com/Haazem/Data-Analysis-Projects/blob/main/8-Week-SQL-Challenge/Case%20Study%20%231%20-%20Danny's%20Diner/Solution.md)
 
 ## Introduction
