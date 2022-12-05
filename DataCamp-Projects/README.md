@@ -45,14 +45,11 @@ The data used in this project is provided by The World Bank. It contains both na
 </details>
 
 
-<details>
-<summary> Project Solution </summary>
-<br>
-[github](https://github.com/Haazem/Data-Analysis-Projects/tree/main/DataCamp-Projects/Analyze%20International%20Debt%20Statistics)
-</details>
+[Solution on Github](https://github.com/Haazem/Data-Analysis-Projects/tree/main/DataCamp-Projects/Analyze%20International%20Debt%20Statistics)
 
 
-
+  
+  
 ----
 
 ### 2. Analyzing American Baby Name Trends
