@@ -89,6 +89,9 @@ The ranking, grouping, joining, ordering, and pattern matching skills you'll use
 
 ----
 
+[Solution on Github](https://github.com/Haazem/Data-Analysis-Projects/tree/main/DataCamp-Projects/Analyzing%20American%20Baby%20Name%20Trends)
+
+
 ### 3. Optimizing Online Sports Retail Revenue
 
 
@@ -132,6 +135,8 @@ You will use techniques such as aggregation, cleaning, labeling, Common Table Ex
 </details>
 
 ----
+
+[Solution on Github](https://github.com/Haazem/Data-Analysis-Projects/tree/main/DataCamp-Projects/Optimizing%20Online%20Sports%20Retail%20Revenue)
 
 
 
@@ -178,6 +183,9 @@ You will look at how performance varies by borough, identify how many schools fa
 </details>
 
 
+[Solution on Github](https://github.com/Haazem/Data-Analysis-Projects/tree/main/DataCamp-Projects/Analyzing%20NYC%20Public%20School%20Test%20Result%20Scores)
+
+
 
 ----
 
@@ -220,6 +228,7 @@ Your search will involve joining datasets and comparing results with set theory.
 </details>
 
 
+[Solution on Github](https://github.com/Haazem/Data-Analysis-Projects/tree/main/DataCamp-Projects/When%20Was%20the%20Golden%20Age%20of%20Video%20Games%3F)
 
 
 
