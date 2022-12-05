@@ -292,3 +292,61 @@ GROUP BY s.customer_id;
 
 
 ----
+
+## BONUS QUESTIONS
+### Join All The Things - Recreate the table with: customer_id, order_date, product_name, price, member (Y/N)
+
+```sql
+
+SELECT s.customer_id,
+	   s.order_date,
+	   m.product_name,
+	   m.price,
+	   CASE WHEN mb.join_date IS NULL THEN 'N'
+	        WHEN mb.join_date IS NOT NULL AND mb.join_date > s.order_date
+			THEN 'N'
+			ELSE 'Y' END as member
+FROM dannys_diner.sales s 
+JOIN dannys_diner.menu m
+ON s.product_id = m.product_id
+LEFT JOIN dannys_diner.members mb
+ON mb.customer_id = s.customer_id;
+
+```
+
+![B1](https://user-images.githubusercontent.com/73290269/205587824-588c378c-4a7a-42fb-82eb-b3379c84b7ea.png)
+
+----
+
+### Rank All The Things Danny also requires further information about the ranking of customer products, but he purposely does not need the ranking for non-member purchases so he expects null ranking values for the records when customers are not yet part of the loyalty program.
+
+```sql
+
+WITH join_all_data
+AS(
+	SELECT s.customer_id,
+		   s.order_date,
+		   m.product_name,
+		   m.price,
+		   CASE WHEN mb.join_date IS NULL THEN 'N'
+				WHEN mb.join_date IS NOT NULL AND mb.join_date > s.order_date
+				THEN 'N'
+				ELSE 'Y' END as member
+	FROM dannys_diner.sales s 
+	JOIN dannys_diner.menu m
+	ON s.product_id = m.product_id
+	LEFT JOIN dannys_diner.members mb
+	ON mb.customer_id = s.customer_id
+)
+
+SELECT * ,CASE 
+        WHEN member = 'Y' THEN RANK() OVER(PARTITION BY customer_id,member ORDER BY order_date) 
+	    ELSE NULL END as ranking
+FROM join_all_data;
+
+
+```
+
+![B2](https://user-images.githubusercontent.com/73290269/205588065-dd553b79-2fcd-456d-abdd-6b61130f5748.png)
+
+----
