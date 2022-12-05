@@ -2,7 +2,7 @@
 
 ![case_1](https://user-images.githubusercontent.com/73290269/205441001-e01c76e2-6661-43cf-a5d8-29c6d50843ef.png)
 
-[view case here](https://github.com/katiehuangx/8-Week-SQL-Challenge/blob/main/Case%20Study%20%231%20-%20Danny's%20Diner/Solution.md)
+[view case here](https://8weeksqlchallenge.com/case-study-1/)
 
 # Table of contents
 1. [Introduction](#introduction)
