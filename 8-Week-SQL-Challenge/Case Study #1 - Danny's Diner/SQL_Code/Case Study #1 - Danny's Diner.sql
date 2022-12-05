@@ -228,4 +228,53 @@ WHERE s.order_date <= '2021-01-31'
 GROUP BY s.customer_id;
 
 
+--Bonus Questions
+
+--Join All The Things
+
+SELECT s.customer_id,
+	   s.order_date,
+	   m.product_name,
+	   m.price,
+	   CASE WHEN mb.join_date IS NULL THEN 'N'
+	        WHEN mb.join_date IS NOT NULL AND mb.join_date > s.order_date
+			THEN 'N'
+			ELSE 'Y' END as member
+FROM dannys_diner.sales s 
+JOIN dannys_diner.menu m
+ON s.product_id = m.product_id
+LEFT JOIN dannys_diner.members mb
+ON mb.customer_id = s.customer_id;
+
+
+--Rank All The Things
+
+WITH join_all_data
+AS(
+	SELECT s.customer_id,
+		   s.order_date,
+		   m.product_name,
+		   m.price,
+		   CASE WHEN mb.join_date IS NULL THEN 'N'
+				WHEN mb.join_date IS NOT NULL AND mb.join_date > s.order_date
+				THEN 'N'
+				ELSE 'Y' END as member
+	FROM dannys_diner.sales s 
+	JOIN dannys_diner.menu m
+	ON s.product_id = m.product_id
+	LEFT JOIN dannys_diner.members mb
+	ON mb.customer_id = s.customer_id
+)
+
+SELECT * ,CASE 
+        WHEN member = 'Y' THEN RANK() OVER(PARTITION BY customer_id,member ORDER BY order_date) 
+	    ELSE NULL END as ranking
+FROM join_all_data;
+
+
+
+
+
+
+
 
