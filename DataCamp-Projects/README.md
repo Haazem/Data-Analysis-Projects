@@ -135,9 +135,11 @@ You will use techniques such as aggregation, cleaning, labeling, Common Table Ex
 
 </details>
 
-----
 
 [view project here](https://github.com/Haazem/Data-Analysis-Projects/tree/main/DataCamp-Projects/Optimizing%20Online%20Sports%20Retail%20Revenue)
+
+----
+
 
 
 
