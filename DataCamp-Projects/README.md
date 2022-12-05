@@ -87,9 +87,10 @@ The ranking, grouping, joining, ordering, and pattern matching skills you'll use
 
 </details>
 
+[view project here](https://github.com/Haazem/Data-Analysis-Projects/tree/main/DataCamp-Projects/Analyzing%20American%20Baby%20Name%20Trends)
+
 ----
 
-[view project here](https://github.com/Haazem/Data-Analysis-Projects/tree/main/DataCamp-Projects/Analyzing%20American%20Baby%20Name%20Trends)
 
 
 ### 3. Optimizing Online Sports Retail Revenue
